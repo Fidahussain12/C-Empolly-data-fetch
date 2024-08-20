@@ -1,0 +1,38 @@
+class Program
+{
+    static void Main()
+    {
+        Employee e1 = new Employee("ali khan", "malir khi" ,101 , 24);
+       Console.WriteLine(e1.GetInfo());
+        Console.WriteLine(e1.Getdetail());
+
+    }
+}
+
+public class Employee
+{
+    // define attributes/ vaiables
+    string name, address;
+    int emp_code, age; 
+
+    // make contructor
+    public Employee(string name , string address , int emp_code , int age)
+    {
+        this.name = name;
+        this.address = address;
+        this.emp_code =Convert.ToInt32( emp_code);
+        this.age = Convert.ToInt32(age);
+    }
+
+    // method 
+    public string GetInfo()
+    {
+        return ("\tEmp Name: " + this.name + "\nAddress: " + this.address);   
+    }
+   public string Getdetail()
+    {
+        return ("Emp Code: " + this.emp_code + "\n Age: " + this.age);
+    
+    }
+
+}
